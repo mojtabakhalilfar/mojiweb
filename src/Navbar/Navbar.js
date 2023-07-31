@@ -14,19 +14,19 @@ const Navbar = (props) => {
         <FaEarlybirds className='w-16 h-16'/>
       </div>
       <div className='mt-4 h-4/6 w-full flex justify-start items-start flex-col'>
-        <Button name='صفحه اصلی' Link='/' onClick={()=>{setClicked([true , false , false , false])}} index={0}> 
+        <Button name='صفحه اصلی' Link='/' onClick={()=>{setClicked([true , false , false , false, false])}} index={0}> 
             <FaSolarPanel/>
         </Button>
-        <Button name='نمونه کار' Link='/users' onClick={()=>{setClicked([ false ,true , false , false])}} index={1}> 
+        <Button name='نمونه کار' Link='/portfolio' onClick={()=>{setClicked([ false ,true , false , false, false])}} index={1}> 
             <FaUsers/>
         </Button>
-        <Button name='رزومه' Link='/login' onClick={()=>{setClicked([ false , false ,true , false])}} index={2}> 
+        <Button name='رزومه' Link='/resume' onClick={()=>{setClicked([ false , false ,true , false, false])}} index={2}> 
             <FaSignal/>
         </Button>
-        <Button name='درباره من' Link='/singin' onClick={()=>{setClicked([ false , false , false , true])}} index={3}> 
+        <Button name='درباره من' Link='/aboutmE' onClick={()=>{setClicked([ false , false , false , true, false])}} index={3}> 
             <FaRegIdCard/>
         </Button>
-        <Button name='مقالات' Link='/singin' onClick={()=>{setClicked([ false , false , false , true])}} index={3}> 
+        <Button name='مقالات' Link='/articles' onClick={()=>{setClicked([ false , false , false , false , true])}} index={4}> 
             <FaRegIdCard/>
         </Button>
       </div>

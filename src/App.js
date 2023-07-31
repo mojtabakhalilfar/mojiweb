@@ -1,21 +1,23 @@
 import { createContext ,useState} from 'react';
 import { BrowserRouter as Router , Route , Routes } from 'react-router-dom';
-import Dashbord from './component/Dashbord/Dashbord';
-import Users from './component/Users/Users';
-import Singin from './component/Singin/Singin';
-import Login from './component/Login/Login';
+import FirstPage from './component/FirstPage/FirstPage';
+import Resume from './component/Resume/Resume';
+import Articles from './component/Articles/Articles';
+import Portfolio from './component/Portfolio/Portfolio';
+import AboutME from './component/AboutMe/AboutMe';
 
 export const ClickedAll=createContext()
 function App() {
-  const [clicked , setClicked] = useState([true , false , false , false])
+  const [clicked , setClicked] = useState([true , false , false , false, false])
   return (
     <ClickedAll.Provider value={{clicked , setClicked}}>
       <Router>
         <Routes>
-          <Route path='/' element={<Dashbord/>} />
-          <Route path='/users' element={<Users/>} />
-          <Route path='/singin' element={<Singin/>} />
-          <Route path='/login' element={<Login/>} />
+          <Route path='/' element={<FirstPage/>} />
+          <Route path='/resume' element={<Resume/>} />
+          <Route path='/articles' element={<Articles/>} />
+          <Route path='/portfolio' element={<Portfolio/>} />
+          <Route path='/aboutmE' element={<AboutME/>} />
         </Routes>
     </Router>
     </ClickedAll.Provider>
