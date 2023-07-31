@@ -20,9 +20,9 @@ const Navbar = (props) => {
         <Button name='نمونه کار' Link='/portfolio' onClick={()=>{setClicked([ false ,true , false , false, false])}} index={1}> 
             <FaUsers/>
         </Button>
-        <Button name='رزومه' Link='/resume' onClick={()=>{setClicked([ false , false ,true , false, false])}} index={2}> 
+        {/* <Button name='رزومه' Link='/resume' onClick={()=>{setClicked([ false , false ,true , false, false])}} index={2}> 
             <FaSignal/>
-        </Button>
+        </Button> */}
         <Button name='درباره من' Link='/aboutmE' onClick={()=>{setClicked([ false , false , false , true, false])}} index={3}> 
             <FaRegIdCard/>
         </Button>
