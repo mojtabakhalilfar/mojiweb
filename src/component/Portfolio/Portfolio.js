@@ -14,7 +14,7 @@ const Portfolio = () => {
         </div>
         <div className='w-full h-full flex flex-col justify-center items-center ' >
           <Sample className='w-2/3 h-auot mb-12' name='sanjab' tools='html , css , react' img={sanjabweb} href='https://firstmoji.iran.liara.run/'/> 
-          <hr className='border-t-8 w-full mb-8 border-red-500'/>
+          <hr className='border-t-8 w-2/3 mb-8 border-red-500'/>
           <Sample className='w-2/3 h-auto mb-12' name='sanjab' tools='html , css , react' img={sanjabweb} href='https://firstmoji.iran.liara.run/'/> 
         </div>     
       </div>

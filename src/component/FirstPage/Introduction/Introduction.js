@@ -1,6 +1,9 @@
-import React from 'react'
+import React , {useContext} from 'react'
+import { Link } from 'react-router-dom'
+import { ClickedAll } from '../../../App'
 
 const Introduction = (props) => {
+  const {setClicked}=useContext(ClickedAll)
   return (
     <div className={props.className}>
         <div className={`w-full h-auto relative flex justify-center items-center`}>
@@ -8,6 +11,7 @@ const Introduction = (props) => {
           <div className='absolute top-0 w-full flex flex-col justify-center items-center font-Vazirmatn'>
             <h2 className='lg:pt-32 pt-4'>مجتبی خلیل فر هستم</h2>
             <p className='sm:w-3/4 lg:px-48 px-4 lg:pt-8 pt-4 text-center lg:leading-8'>علاقه و تخصص من بیشتر برنامه نویسی هست و سعی می‌کنم حداقل توی تخصص خودم به روز باشم. توی زندگی و کار یه سری قوانین برای خودم دارم که سعی می‌کنم همیشه بهشون عمل کنم.</p>
+            <Link className='lg:px-6 lg:py-4 sm:px-4 sm:py-2 sm:mt-2 bg-yellow-500 rounded-lg lg:mt-4' to='/aboutmE' onClick={()=>{setClicked([ false , false , false , true, false])}}>درباره من</Link>
           </div>
         </div>
     </div>

@@ -7,7 +7,7 @@ const AboutME = () => {
   return (
     <Layout >
       <div className="flex w-full h-max">
-        <PersonalInformation className='w-1/4 h-100 dark:text-white dark:bg-black bg-red-100'/>
+        <PersonalInformation className='w-1/4 h-100 dark:text-white dark:bg-gray-900 bg-gray-300'/>
         <Resome className='w-3/4 h-fmax dark:text-white dark:bg-black bg-gray-100' />
       </div>
     </Layout>

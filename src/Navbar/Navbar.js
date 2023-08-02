@@ -10,7 +10,7 @@ const Navbar = (props) => {
 
   return (
     <div className={props.className}>
-      <div className='lg:mt-4 sm:mt-1 text-red-500 h-1/6 flex justify-center w-full'>
+      <div className='lg:mt-4 sm:mt-1 text-red-500 h-1/6 flex justify-center w-full '>
         <FaEarlybirds className='w-16 h-16'/>
       </div>
       <div className='lg-mt-4 sm-2 sm:h-3/6 lg:h-4/6 w-full flex lg:justify-start sm:justify-between items-center flex-col'>
