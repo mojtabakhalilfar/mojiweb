@@ -8,8 +8,8 @@ const Portfolio = () => {
 
   return (
     <Layout>
-      <div className='w-full flex flex-col justify-center items-center bg-green-400'>
-        <div className='mt-16'>
+      <div className='w-full max-h-auto min-h-full flex flex-col justify-start  items-center'>
+        <div className='lg:mt-8 sm:mt-0'>
           <h2 className='lg:text-xl sm:text-lg py-8'>نمونه کار ها</h2>
         </div>
         <div className='w-full h-full flex flex-col justify-center items-center' >
