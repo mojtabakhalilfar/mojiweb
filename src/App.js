@@ -12,7 +12,7 @@ export const ClickedAll=createContext()
 function App() {
   const [clicked , setClicked] = useState([true , false , false , false, false])
   const [darkmood , setdarkmood]=useState(false)
-  const [hide , setHide]=useState(false)
+  const [hide , setHide]=useState(true)
   return (
     <ClickedAll.Provider value={{clicked , setClicked, darkmood ,setdarkmood ,hide , setHide}}>
        <ReactAudioPlayer autoPlay loop src="http://dl.behmelody.in/1401/Tir/Emrah%20Karaduman%2C%20No%20Method%20-%20All%20Night%20%282%29.mp3"/>
