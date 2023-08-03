@@ -10,10 +10,7 @@ const Navbar = (props) => {
 
   return (
     <div className={props.className}>
-      <div className='lg:mt-4 sm:mt-1 text-red-500 h-1/6 flex justify-center w-full '>
-        <FaEarlybirds className='w-16 h-16'/>
-      </div>
-      <div className='lg-mt-4 sm-2 sm:h-3/6 lg:h-4/6 w-full flex lg:justify-start sm:justify-between items-center flex-col'>
+      <div className='lg:mt-2 sm:m-0 h-3/4 w-full flex lg:justify-start sm:justify-start items-center flex-col'>
         <Button name='صفحه اصلی' Link='/' onClick={()=>{setClicked([true , false , false , false, false])}} index={0}> 
             <FaSolarPanel/>
         </Button>
@@ -27,7 +24,7 @@ const Navbar = (props) => {
             <FaRegIdCard/>
         </Button>
       </div>
-      <div className='lg:h-1/6 sm:mt-20 flex justify-center w-full'>
+      <div className='lg:h-1/6 sm:h-1/4 sm:mt-20 flex justify-center w-full'>
         <Link to={'/'} >
             <FaSpider className='text-red-500 w-8 h-8'/>
         </Link>

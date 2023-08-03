@@ -1,28 +1,30 @@
 import React, { useContext } from "react";
 import { ClickedAll } from "../App";
 import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
-import ReactAudioPlayer from "react-audio-player";
 
 const Header = (props) => {
   const { darkmood, setdarkmood } = useContext(ClickedAll);
+  const { hide, setHide } = useContext(ClickedAll);
   return (
     <div className={props.className}>
       <div className="w-full h-full flex justify-between items-center border-b-4 dark:border-gray-100 border-black">
-        <div className="w-1/4 h-full">
-          <button className="w-24 h-16" onClick={() => setdarkmood(!darkmood)}>
-            {darkmood ? <MdDarkMode className="w-full h-full" /> : <MdOutlineDarkMode className="w-full h-full" />}
+        <div className="w-1/4 flex justify-center pl-16 bg-red-500">
+          <button className="sm:block lg:hidden" onClick={() => setHide(!hide)}>
+            hk
           </button>
         </div>
-        <div>
-          {/* <audio  controls autoPlay>
-            <source src="http://dl.behmelody.in/1401/Tir/Emrah%20Karaduman%2C%20No%20Method%20-%20All%20Night%20%282%29.mp3" type="audio/mpeg"/>
-          </audio> */}
-          <ReactAudioPlayer src="http://dl.behmelody.in/1401/Tir/Emrah%20Karaduman%2C%20No%20Method%20-%20All%20Night%20%282%29.mp3" controls/>
-        </div>
-        <div className="w-1/4 h-full flex items-end justify-start">
-            <button className="w-24 h-16">
-                fa/en
-            </button>
+        <div className="w-3/4 h-full flex justify-end lg:ml-6">
+          <button
+            className="lg:w-24 lg:h-16 sm:w-16 sm:h-12"
+            onClick={() => setdarkmood(!darkmood)}
+          >
+            {darkmood ? (
+              <MdDarkMode className="w-full h-full" />
+            ) : (
+              <MdOutlineDarkMode className="w-full h-full" />
+            )}
+          </button>
+          <button className="w-24 h-16">fa/en</button>
         </div>
       </div>
     </div>
