@@ -4,7 +4,7 @@ import Explain from "./Explain";
 const Explains = (props) => { 
   return (
     <div className={props.className}>
-      <div className="flex sm:flex-col lg:flex-row flex-wrap items-center justify-center w-full h-full">
+      <div className="flex sm:flex-col lg:flex-row flex-wrap items-center justify-center w-full">
         <Explain
           className="lg:w-1/2 sm:w-full"
           img="https://th.bing.com/th/id/OIP.lmpxMI1Ymuj-R9TH8j5zsQHaEK?pid=ImgDet&rs=1"
