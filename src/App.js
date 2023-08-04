@@ -15,9 +15,9 @@ function App() {
   const [hide , setHide]=useState(true)
   const [message , setMessage]=useState({})
   const [num , setNum]=useState(0)
-  
+  const [farsi , setFarsi] = useState(true)
   return (
-    <ClickedAll.Provider value={{clicked , setClicked, darkmood ,setdarkmood ,hide , setHide ,message , setMessage,num , setNum}}>
+    <ClickedAll.Provider value={{clicked , setClicked, darkmood ,setdarkmood ,hide , setHide ,message , setMessage,num , setNum ,farsi , setFarsi}}>
        {/* <ReactAudioPlayer autoPlay loop src="http://dl.behmelody.in/1401/Tir/Emrah%20Karaduman%2C%20No%20Method%20-%20All%20Night%20%282%29.mp3"/> */}
       <Router>
         <Routes>

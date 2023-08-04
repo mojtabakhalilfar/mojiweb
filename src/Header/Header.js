@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import { ClickedAll } from "../App";
 import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
 import {TiThMenu} from 'react-icons/ti'
+import {GrLanguage} from 'react-icons/gr'
 
 const Header = (props) => {
   const { darkmood, setdarkmood } = useContext(ClickedAll);
   const { hide, setHide } = useContext(ClickedAll);
+  const {farsi , setFarsi} =useContext(ClickedAll)
   return (
     <div className={props.className}>
       <div className="w-full h-full flex justify-between items-center border-b-4 dark:border-gray-100 border-black">
@@ -25,7 +27,7 @@ const Header = (props) => {
               <MdOutlineDarkMode className="w-full h-full" />
             )}
           </button>
-          <button className="w-24 h-16">fa/en</button>
+          <button onClick={()=>setFarsi(!farsi)} className="lg:w-20 lg:h-12 sm:w-16 sm:h-12"><GrLanguage className="w-full h-full"/></button>
         </div>
       </div>
     </div>

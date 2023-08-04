@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { ClickedAll } from "../../../App";
 
 const ContactWithMe = (props) => {
+  const { farsi } = useContext(ClickedAll);
   const { message, setMessage , num , setNum } = useContext(ClickedAll);
   const { register, handleSubmit } = useForm();
   const sendPm = (data) => {
@@ -16,42 +17,59 @@ const ContactWithMe = (props) => {
     console.log(messages);
     console.log(data);
   };
+const textFarsi=(<p className="my-2 px-2 dark:text-white">
+راه های ارتباطی با من در
+{' '}<Link className="text-blue-500" to="/aboutmE">
+  این صفحه 
+</Link>{' '}
+وجود دارند ولی در این قسمت هم میتونید با من در ارتباط باشید
+</p>)
+const textEnghlish=(<p dir="ltr" className="my-2 px-2 dark:text-white">
+Ways to Contact Me
+{' '}<Link className="text-blue-500" to="/aboutmE">
+  This page 
+</Link>{' '}
+They exist، but you can also contact me here.
+</p>)
+
   return (
     <div className={props.className}>
-      <div className="w-full h-full bg-white dark:bg-gray-600 dark:text-black rounded-lg p-4">
+      <div className="w-4/5 h-full bg-white dark:bg-gray-600 dark:text-black rounded-lg p-4 flex flex-col justify-start items-center">
         <div className="mb-6">
-          <h2 className="text-center my-2 dark:text-white">ارتباط با من</h2>
-          <p className="my-2 px-2 dark:text-white">
-            راه های ارتباطی با من در{" "}
-            <Link className="text-blue-500" to="/aboutmE">
-              این صفحه
-            </Link>{" "}
-            وجود دارند ولی در این قسمت هم میتونید به من ایمیل بدید{" "}
-          </p>
+          <h2 className="text-center my-2 dark:text-white">
+           {farsi?' ارتباط با من':' Contact me'}
+           </h2>
+      {farsi?textFarsi:textEnghlish}
         </div>
-        <form onSubmit={handleSubmit(sendPm)} className="flex flex-col">
-          <label className="dark:text-white" for="name">نام</label>
+        <form onSubmit={handleSubmit(sendPm)} className="flex flex-col w-2/3" dir={farsi?'rtl':'ltr'}>
+          <label className="dark:text-white" for="name">
+            {farsi?'نام':'name'}
+          </label>
           <input
           className="py-2 px-4 outline-none border-2 border-gray-500 rounded"
-            placeholder="نام خود را وارد کنید"
+            placeholder={farsi?"نام خود را وارد کنید":"Enter your name"}
             id="name"
             type="text"
             {...register("name")}
           />
           <br />
-          <label className="dark:text-white" for="subject">موضوع</label>
+          <label className="dark:text-white" for="subject">
+            {farsi?'موضوع':'subject'}
+          </label>
           <input
           className="py-2 px-4 outline-none border-2 border-gray-500 rounded"
-            placeholder="موضوع را وارد کنید"
+            placeholder={farsi?"موضوع را وارد کنید":"Enter the Subject"}
             id="subject"
             type="text"
             {...register("subject")}
           />
           <br />
-          <label className="dark:text-white" for="email">ایمیل</label>
+          <label className="dark:text-white" for="email">
+            {farsi?'ایمیل':'email'}
+          </label>
           <input
           className="py-2 px-4 outline-none border-2 border-gray-500 rounded"
-            placeholder="ایمیل خود را وارد کنید"
+            placeholder={farsi?"ایمیل خود را وارد کنید":"Enter your email"}
             id="email"
             type="email"
             {...register("email")}
@@ -60,10 +78,10 @@ const ContactWithMe = (props) => {
           <textarea
           className="py-2 px-4 outline-none border-2 border-gray-500 rounded"
             cols="40"
-            placeholder=" متن ارسالی را وارد کنید"
+            placeholder={farsi?" متن ارسالی را وارد کنید":"Enter the sent text"}
             {...register("text")}
           />
-          <input className="py-2 px-4 bg-blue-500 mt-4" type="submit" value="ارسال" />
+          <input className="py-2 px-4 bg-blue-500 mt-4" type="submit" value={farsi?"ارسال" :'send'}/>
         </form>
       </div>
     </div>

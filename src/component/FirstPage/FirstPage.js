@@ -9,8 +9,8 @@ const FirstPage = () => {
     <Layout>
       <div className='flex flex-col justify-center items-center w-full h-auto'>
         <Introduction className='mt-8' />
-        <Explains className='my-8' />
-        <ContactWithMe className='my-8 lg:w-full sm:w-2/3' />
+        <Explains className='my-8 flex flex-col justify-start items-center' />
+        <ContactWithMe className='my-8 w-full flex flex-col justify-start items-center' />
       </div>
     </Layout>
   )

@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ClickedAll } from "../../../../App";
 
 const Biography = (props) => {
+  const { farsi } = useContext(ClickedAll);
   return (
-    <div className={props.className}>
+    <div dir={farsi ? "rtl" : "ltr"} className={props.className}>
       <div className="flex h-full w-full flex-col items-start justify-start pt-4 px-8">
         <div>
-          <h2 className="lg:text-2xl text-xl">درباره من</h2>
+          <h2 className="lg:text-2xl text-xl">
+            {farsi ? " درباره من" : " About Me"}
+          </h2>
         </div>
         <div className="w-full pb-4 px-4 font-Vazirmatn">
-          <br /> در حال حاضر دانشجو کارشناسی هستم
-          <br /> ساکن یاسوج هستم سربازی نرفتنم
-          <br /> به برنامه نویسی علاقه مندم در حال حاضر فرانت کار میکنم ولی حوزه
-          به امنیت هم علاقه دارم
+          <br />{" "}
+          {farsi
+            ? "در حال حاضر دانشجو کارشناسی هستم"
+            : "I am currently an undergraduate student"}
+          <br />{" "}
+          {farsi
+            ? "ساکن یاسوج هستم سربازی نرفتنم"
+            : "I am a resident of Yasuj and I am not a soldier."}
+          <br />{" "}
+          {farsi
+            ? "به برنامه نویسی علاقه مندم در حال حاضر فرانت کار میکنم ولی به امنیت هم علاقه دارم"
+            : "Im interested in programming، but Im currently working front، but Im also interested in security."}
         </div>
       </div>
     </div>

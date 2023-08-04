@@ -8,13 +8,14 @@ import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
   const { setClicked } = useContext(ClickedAll);
+  const {farsi} =useContext(ClickedAll)
 
   return (
     <div className={props.className}>
       <div className="fixed right-10 overflow-hidden">
         <div className="lg:mt-2 sm:m-0 h-3/4 w-full flex lg:justify-start sm:justify-start items-center flex-col">
           <Button
-            name="صفحه اصلی"
+            name={farsi?"صفحه اصلی":"Home"}
             Link="/"
             onClick={() => {
               setClicked([true, false, false, false, false]);
@@ -24,7 +25,7 @@ const Navbar = (props) => {
             <FaSolarPanel />
           </Button>
           <Button
-            name="نمونه کار"
+            name={farsi?"نمونه کار":"Portfolio"}
             Link="/portfolio"
             onClick={() => {
               setClicked([false, true, false, false, false]);
@@ -34,7 +35,7 @@ const Navbar = (props) => {
             <FaUsers />
           </Button>
           <Button
-            name="درباره من"
+            name={farsi?"درباره من":"About Me"}
             Link="/aboutmE"
             onClick={() => {
               setClicked([false, false, false, true, false]);
@@ -44,7 +45,7 @@ const Navbar = (props) => {
             <SiAboutdotme />
           </Button>
           <Button
-            name="مقالات"
+            name={farsi?"مقالات":"Articles"}
             Link="/articles"
             onClick={() => {
               setClicked([false, false, false, false, true]);
