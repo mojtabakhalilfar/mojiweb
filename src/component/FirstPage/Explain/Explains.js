@@ -7,7 +7,7 @@ const Explains = (props) => {
   const { farsi } = useContext(ClickedAll);
   return (
     <div className={props.className}>
-      <div className="flex sm:flex-col lg:flex-row flex-wrap items-center justify-center w-full">
+      <div className="flex sm:flex-col lg:flex-row flex-wrap items-center justify-center w-full sm:pr-0 lg:pr-24">
         <Explain
           className="lg:w-1/2 sm:w-full"
           img="https://th.bing.com/th/id/OIP.lmpxMI1Ymuj-R9TH8j5zsQHaEK?pid=ImgDet&rs=1"

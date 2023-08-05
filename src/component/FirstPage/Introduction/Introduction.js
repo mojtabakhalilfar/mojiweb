@@ -45,7 +45,7 @@ const textEnghlish =(<p dir="ltr" className="sm:w-3/4 lg:px-8 px-4 lg:pt-4 pt-2 
           <h2 className="lg:pt-8 pt-4">
             {farsi?'سلام به وب سایت من خوش آمدید':'Hello Welcome to my website'}
             </h2>
-          <h2 className="lg:pt-2 pt-1">
+          <h2 dir={farsi?'rtl':'ltr'} className="lg:pt-2 pt-1">
             {farsi?'مجتبی خلیل فر هستم':'This is Mojtaba Khalilfar.'}
           </h2>
           {farsi?textFarsi:textEnghlish}
