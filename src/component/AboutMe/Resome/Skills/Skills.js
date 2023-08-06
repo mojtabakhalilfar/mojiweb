@@ -22,7 +22,7 @@ const Skills = (props) => {
         <div className="w-full">
           <h2
             dir={farsi ? "rtl" : "ltr"}
-            className="lg:py-8 py-4 lg:text-2xl text-lg w-full px-8"
+            className="lg:pt-16 py-4 lg:text-2xl text-lg w-full px-8"
           >
             {farsi ? "مهارت ها" : "skills"}
           </h2>

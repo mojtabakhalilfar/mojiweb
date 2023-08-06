@@ -37,11 +37,11 @@ const textEnghlish =(<p dir="ltr" className="w-3/4 lg:px-8 px-4 lg:pt-4 pt-2 tex
         className={`w-full h-auto bg-red-400 relative flex justify-center items-center`}
       >
         <img
-          className="w-5/6 sm:h-256 lg:h-126 rounded-xl opacity-25"
+          className="w-5/6 h-[32rem] lg:h-126 rounded-xl opacity-25"
           src="https://th.bing.com/th/id/R.1bc60bd3666fc3431cd8b1d1ac6c3d0a?rik=J5Pjsy7Dhb0HKg&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2fc%2f7%2f2%2f52697.jpg&ehk=bSFndpRj8KLi1JoWtUOLDphHPT%2bKC3nAvyYQgMDgSeQ%3d&risl=&pid=ImgRaw&r=0"
           alt="background"
         />
-        <div className="absolute lg:top-4 top-0 w-full flex flex-col justify-center items-center font-Vazirmatn">
+        <div className="absolute lg:top-4 sm:top-4 top-0 w-full flex flex-col justify-center items-center font-Vazirmatn">
           <h2 className="lg:pt-8 pt-4">
             {farsi?'سلام به وب سایت من خوش آمدید':'Hello Welcome to my website'}
             </h2>

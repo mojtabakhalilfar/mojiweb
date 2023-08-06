@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '128': '32rem',
+      },
+      height: {
+        '128': '32rem',
+      }
+    },
   },
   darkMode: 'class',
   plugins: [],
