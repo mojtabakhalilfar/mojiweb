@@ -13,15 +13,15 @@ const Header = (props) => {
       <div className="w-full h-full flex justify-between items-center border-b-4 dark:border-gray-100 border-black">
         <div className="w-1/4 h-ull flex justify-center pl-16">
           <button
-            className="sm:block lg:hidden sm:w-12 sm:h-8"
+            className="block lg:hidden w-16 h-12"
             onClick={() => setHide(!hide)}
           >
-            <TiThMenu className="w-full h-full" />
+            <TiThMenu className="w-full h-full mr-4 sm:mr-0" />
           </button>
         </div>
         <div className="w-3/4 h-full flex justify-end items-center lg:ml-6">
           <button
-            className="lg:w-24 lg:h-16 sm:w-16 sm:h-12"
+            className="lg:w-24 lg:h-16 w-16 h-12"
             onClick={() => setdarkmood(!darkmood)}
           >
             {darkmood ? (
@@ -32,7 +32,7 @@ const Header = (props) => {
           </button>
           <button
             onClick={() => setFarsi(!farsi)}
-            className="lg:w-20 lg:h-12 sm:w-16 sm:h-12"
+            className="lg:w-20 lg:h-12 w-16 h-12"
           >
             <MdLanguage className="w-full h-full" />
           </button>

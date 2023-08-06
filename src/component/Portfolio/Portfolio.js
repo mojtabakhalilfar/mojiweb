@@ -11,7 +11,7 @@ const Portfolio = () => {
     <Layout>
       <div className='w-full max-h-auto min-h-screen flex flex-col justify-start items-center'>
         <div className='lg:mt-8 sm:mt-0 mt-16' >
-          <h2 className='lg:text-xl sm:text-lg py-8'>
+          <h2 className='lg:text-xl text-lg py-8'>
            {farsi?' نمونه کار ها':' Portfolio'}
            </h2>
         </div>

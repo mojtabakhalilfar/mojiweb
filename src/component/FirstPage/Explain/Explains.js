@@ -7,9 +7,9 @@ const Explains = (props) => {
   const { farsi } = useContext(ClickedAll);
   return (
     <div className={props.className}>
-      <div className="flex sm:flex-col lg:flex-row flex-wrap items-center justify-center w-full sm:pr-0 lg:pr-24">
+      <div className="flex flex-col lg:flex-row lg:flex-wrap items-center justify-center w-full lg:pr-24">
         <Explain
-          className="lg:w-1/2 sm:w-full"
+          className="lg:w-1/2 w-full"
           img="https://th.bing.com/th/id/OIP.lmpxMI1Ymuj-R9TH8j5zsQHaEK?pid=ImgDet&rs=1"
           alt="bg1"
           title={farsi ? "نمونه کار" : "Portfolio"}
@@ -19,7 +19,7 @@ const Explains = (props) => {
             : "You can see my portfolio here."}
         </Explain>
         <Explain
-          className="lg:w-1/2 sm:w-full"
+          className="lg:w-1/2 w-full"
           img="https://th.bing.com/th/id/OIP.lmpxMI1Ymuj-R9TH8j5zsQHaEK?pid=ImgDet&rs=1"
           alt="bg1"
           title={farsi ? "درباره من" : "About Me"}
@@ -29,7 +29,7 @@ const Explains = (props) => {
             : "In this section you can read about me and see my resume and skills."}
         </Explain>
         <Explain
-          className="lg:w-1/2 sm:w-full"
+          className="lg:w-1/2 w-full"
           img="https://th.bing.com/th/id/OIP.lmpxMI1Ymuj-R9TH8j5zsQHaEK?pid=ImgDet&rs=1"
           alt="bg1"
           title={farsi ? "مقالات" : "Articles"}

@@ -12,8 +12,8 @@ const Navbar = (props) => {
 
   return (
     <div className={props.className}>
-      <div className="fixed right-10 overflow-hidden">
-        <div className="lg:mt-2 sm:m-0 h-3/4 w-full flex lg:justify-start sm:justify-start items-center flex-col">
+      <div className="fixed right-2 top-16 lg:right-10 overflow-hidden">
+        <div className="lg:mt-2 m-0 h-3/4 w-full flex lg:justify-start justify-start items-center flex-col">
           <Button
             name={farsi?"صفحه اصلی":"Home"}
             Link="/"
@@ -55,7 +55,7 @@ const Navbar = (props) => {
             <GrArticle />
           </Button>
         </div>
-        <div className="lg:h-1/6 sm:h-1/4 sm:mt-10 flex justify-center w-full">
+        <div className="lg:h-1/6 h-1/4 mt-10 flex justify-center w-full">
           <Link to={"/"}>
             <FaSpider className="text-red-500 w-8 h-8" />
           </Link>
