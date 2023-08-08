@@ -13,7 +13,7 @@ const Navbar = (props) => {
   return (
     <div className={props.className}>
       <div className="fixed right-2 top-16 lg:right-10 overflow-hidden">
-        <div className="lg:mt-2 m-0 h-3/4 w-full flex lg:justify-start justify-start items-center flex-col">
+        <div className="lg:mt-2 m-0 h-3/4 w-full flex justify-start items-center flex-col">
           <Button
             name={farsi?"صفحه اصلی":"Home"}
             Link="/"
